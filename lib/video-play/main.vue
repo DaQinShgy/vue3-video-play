@@ -135,7 +135,7 @@
           </div>
           <!-- 倍速播放 -->
           <div class="d-tool-item speedRate-btn" v-if="props.controlBtns.includes('speedRate')">
-            {{ state.speedActive == "1.0" ? "倍速" : state.speedActive + "x" }}
+            {{ state.speedActive == "1.0" ? "Speed" : state.speedActive + "x" }}
             <div class="d-tool-item-main">
               <ul class="speed-main">
                 <li
@@ -180,15 +180,15 @@
             <div class="d-tool-item-main">
               <ul class="speed-main">
                 <li>
-                  镜像画面
+                  Mirroring
                   <d-switch @change="mirrorChange" v-model="state.mirror" />
                 </li>
                 <li>
-                  循环播放
+                  Loop
                   <d-switch @change="loopChange" v-model="state.loop" />
                 </li>
                 <li>
-                  关灯模式
+                  Lights-out mode
                   <d-switch @change="lightOffChange" v-model="state.lightOff" />
                 </li>
               </ul>
@@ -201,7 +201,7 @@
             @click="requestPictureInPictureHandle"
           >
             <d-icon size="20" icon="icon-pip"></d-icon>
-            <div class="d-tool-item-main">画中画</div>
+            <div class="d-tool-item-main">Miniplayer</div>
           </div>
           <!-- 网页全屏 -->
           <div
@@ -210,7 +210,7 @@
             @click="state.webFullScreen = !state.webFullScreen"
           >
             <d-icon size="20" icon="icon-web-screen"></d-icon>
-            <div class="d-tool-item-main">网页全屏</div>
+            <div class="d-tool-item-main">Page full screen</div>
           </div>
           <!-- 全屏 -->
           <div
@@ -218,7 +218,7 @@
             v-if="props.controlBtns.includes('fullScreen')"
             @click="toggleFullScreenHandle"
           >
-            <div class="d-tool-item-main">全屏</div>
+            <div class="d-tool-item-main">Full screen</div>
             <d-icon size="20" icon="icon-screen"></d-icon>
           </div>
         </div>
